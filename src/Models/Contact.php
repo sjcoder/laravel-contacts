@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Rinvex\Support\Traits\ValidatingTrait;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Rinvex\Contacts\Models\Contact.
@@ -72,6 +73,7 @@ class Contact extends Model
 {
     use ValidatingTrait;
     use CacheableEloquent;
+    use SoftDeletes;
 
     /**
      * {@inheritdoc}
